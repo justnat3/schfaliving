@@ -21,7 +21,7 @@ def resource_path(relative_path):
 
 def scam_time() -> Scam:
     # load driver
-    driver = webdriver.Chrome(resource_path("./driver/chromedriver.exe"))
+    driver = webdriver.Chrome(resource_path("./driver/winchromedriver.exe"))
     # go to macky'd's highschool website
     driver.get(
         "http://northeast.vypetv.com/hubs/grand-lake/area-news/744-vote-now-neok-area-preseason-most-outstanding-girls-soccer-player-presented-by-northeast-tech-poll-ends-2-10.html?fbclid=IwAR1MCG_p_1ee1mMtOFE3zll5PI0KyMsbQCK34XjND1b6XfZhdNUhvER-0TE"
