@@ -1,7 +1,7 @@
 #!/bin/bash
-sudo apt install wget python3-pip
-wait
+# more or less instructions
+sudo apt install wget python3-pip, chromium-driver
+cp /usr/lib/chromium-browser/chromedriver /usr/bin
 pip install selenium, webdriver-manager
-wait
 cd schfaliving
 python3 scam-server.py
