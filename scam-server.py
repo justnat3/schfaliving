@@ -25,7 +25,7 @@ def scam_time() -> Scam:
     opts.add_argument('--headless')
     opts.add_argument('--no-sandbox')
     opts.add_argument('--disable-dev-shm-usage')
-    driver = webdriver.Chrome('chromedriver', chrome_options=opts)
+    driver = webdriver.Chrome('./driver/chromedriver', chrome_options=opts)
     # go to macky'd's highschool website
     driver.get(
         "http://northeast.vypetv.com/hubs/grand-lake/area-news/744-vote-now-neok-area-preseason-most-outstanding-girls-soccer-player-presented-by-northeast-tech-poll-ends-2-10.html?fbclid=IwAR1MCG_p_1ee1mMtOFE3zll5PI0KyMsbQCK34XjND1b6XfZhdNUhvER-0TE"
@@ -37,11 +37,17 @@ def scam_time() -> Scam:
     # sleep for 5 seconds
     time.sleep(5)
     driver.close()
+    driver.quit()
+    return
 
 
 def scam_position() -> Scam:
-    while True:
+    try:
+        while True:
+            scam_time()
+    except Exception as failure:
         scam_time()
+        
     # Position is different
     # ID is the same everytime
     # PDI_answer49601961
